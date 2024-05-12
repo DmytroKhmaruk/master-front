@@ -2,23 +2,29 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
     border-bottom: 1px solid #ececec;
-    border-bottom: 1px solid black;
+    /* outline: 1px solid red; */
 `
 
 export const HeaderContainer = styled.div`
+/* outline: 1px solid red; */
     height: 72px;
-    padding-left: 20px;
-    padding-right: 20px;
+    
     margin-left: auto;
     margin-right: auto;
 
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 767px) {
-        max-width: 480px;
-        width: 100%;
+    @media screen and (max-width: 767.5px) {
         
+        padding-left: 16px;
+        padding-right: 16px;
+        
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
    
    @media screen and (min-width: 768px)and (max-width: 1239px){
@@ -39,12 +45,36 @@ export const Logo = styled.a`
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 767.5px){
+        display: none;
+    }
+
     /* &:hover{
         transform: scale(1.02);
     } */
 `
 
-export const Button = styled.button`
+export const MenuButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    
+    background-color: white;
+    border: none;
+    
+    & svg {
+    width: 24px;
+    height: 24px;
+    padding: 12px 0;
+  }
+
+    @media screen and (min-width: 768px){
+        display: none;
+    }
+`
+
+export const CatalogButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,6 +100,10 @@ export const Button = styled.button`
     padding-right: 4px;
     
   }
+
+  @media screen and (max-width: 767.5px){
+        display: none;
+    }
 `
 
 export const SearchContainer = styled.div`
@@ -77,7 +111,7 @@ export const SearchContainer = styled.div`
    border-radius: 4px;
    display: flex;
    align-items: center;
-   margin-left: 40px;
+   
    
    height: 39px;
 
@@ -100,14 +134,20 @@ export const SearchContainer = styled.div`
         transform: scale(1.02);
     }
 
+    @media screen and (max-width: 767.5px) {
+         width: 100%;
+    }
+
     @media screen and (min-width: 768px)and (max-width: 1239px){
         max-width: 500px;
         width: 100%;
+        margin-left: 40px;
    }
 
    @media screen and (min-width: 1240px){
         max-width: 640px;
         width: 100%;
+        margin-left: 40px;
    }
 `
 
@@ -118,7 +158,11 @@ export const Input = styled.input`
     padding: 4px 0 4px 12px;
     
     &:focus {
-  outline: none;
+    outline: none;
+    
+  @media screen and (max-width: 767.5px) {
+         width: 100%;
+    }
 
   @media screen and (min-width: 768px)and (max-width: 1239px){
         max-width: 500px;
@@ -135,6 +179,7 @@ export const ButtonContainer = styled.div`
     display: flex;
     align-items: center;
     margin-left: auto;
+    /* outline: 1px solid red; */
 `
 
 export const ButtonUser = styled.button`
@@ -159,9 +204,14 @@ export const ButtonUser = styled.button`
         transform: scale(1.02);
         color: #F37A1F;
     }
+
+    @media screen and (max-width: 767.5px){
+        display: none;
+    }
 `
 
 export const ButtonCart = styled.button`
+/* outline: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;

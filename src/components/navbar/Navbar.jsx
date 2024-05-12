@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header, HeaderContainer, Button, Logo, SearchContainer, Input, ButtonUser, ButtonCart, ButtonContainer } from './NavbarStyled';
-import { AiOutlineAppstore, AiOutlineSearch, AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
+import { Header, HeaderContainer, CatalogButton, Logo, SearchContainer, Input, ButtonUser, ButtonCart, ButtonContainer, MenuButton } from './NavbarStyled';
+import { AiOutlineMenuUnfold, AiOutlineAppstore, AiOutlineSearch, AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
 
 function Navbar() {
   return (
@@ -8,10 +8,13 @@ function Navbar() {
         <HeaderContainer>
 
             <Logo href='/'>Майстер</Logo>
-            <Button type='button'>
+            <MenuButton>
+              < AiOutlineMenuUnfold/>
+            </MenuButton>
+            <CatalogButton type='button'>
                 <AiOutlineAppstore />
                 Каталог
-            </Button>
+            </CatalogButton>
             <SearchContainer>
               <Input/>
               <AiOutlineSearch/>
