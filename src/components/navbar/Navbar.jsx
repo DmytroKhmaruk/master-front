@@ -6,7 +6,6 @@ function Navbar() {
   return (
     <Header>
         <HeaderContainer>
-
             <Logo href='/'>Майстер</Logo>
             <MenuButton>
               < AiOutlineMenuUnfold/>

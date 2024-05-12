@@ -1,13 +1,24 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
+    
+
     border-bottom: 1px solid #ececec;
     /* outline: 1px solid red; */
+
+    /* @media screen and (max-width: 767.5px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        z-index: 1000;
+    } */
 `
 
 export const HeaderContainer = styled.div`
 /* outline: 1px solid red; */
-    height: 72px;
+    
     
     margin-left: auto;
     margin-right: auto;
@@ -16,7 +27,7 @@ export const HeaderContainer = styled.div`
     align-items: center;
 
     @media screen and (max-width: 767.5px) {
-        
+        height: 52px;
         padding-left: 16px;
         padding-right: 16px;
         
@@ -25,6 +36,7 @@ export const HeaderContainer = styled.div`
     @media screen and (min-width: 768px) {
         padding-left: 20px;
         padding-right: 20px;
+        height: 72px;
     }
    
    @media screen and (min-width: 768px)and (max-width: 1239px){
@@ -66,7 +78,7 @@ export const MenuButton = styled.button`
     & svg {
     width: 24px;
     height: 24px;
-    padding: 12px 0;
+    /* padding: 12px 0; */
   }
 
     @media screen and (min-width: 768px){
@@ -155,7 +167,7 @@ export const Input = styled.input`
     border: none;
     max-width: 640px;
     width: 100%;
-    padding: 4px 0 4px 12px;
+    padding: 4px 12px 4px 12px;
     
     &:focus {
     outline: none;
@@ -230,5 +242,9 @@ export const ButtonCart = styled.button`
    & svg:hover{
         transform: scale(1.02);
         color: #F37A1F;
+    }
+
+    @media screen and (max-width: 767.5px){
+        margin-left: 8px;
     }
 `
